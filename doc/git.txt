@@ -1,0 +1,104 @@
+*git.txt*       Integration with Mercurial  v0.1
+*git* *'mercurial'*
+===============================================================================
+#                  GIT                                                        #
+#                                                                             #
+===============================================================================
+CONTENTS                                                         *git-contents*
+
+    1. Intro........................................|git-intro|
+    2. Mappings.....................................|git-mappings|
+    3. Credits......................................|git-credits|
+
+===============================================================================
+INTRO                                                         *git-intro*
+
+Simple integration with git.  This bundle is really nothing more than a bunch
+of my standard keyboard mappings.
+
+(Note that in windows you have to change ~/.vim to be ~\vimfiles.)
+
+This requires:
+
+1/  Pathogen:  https://github.com/tpope/vim-pathogen
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+curl -Sso ~/.vim/autoload/pathogen.vim \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+Modify your ~/.vimrc to contain:
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+call pathogen#infect()
+
+2/  Fugitive: https://github.com/tpope/vim-fugitive
+
+cd ~/.vim/bundle
+git clone git://github.com/tpope/vim-fugitive.git
+
+
+3/  Vundle - https://github.com/gmarik/vundle
+
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+Add the following to your ~/.vimrc
+
+call vundle#rc()
+Bundle 'mchughj/vim-git'
+
+The final step is to call :BundleInstall!  This will fetch and update the
+bundles under control of Vundle.
+
+
+===============================================================================
+MAPPINGS                                                   *git-mappings*
+
+Every mapping is tied to the <Leader> concept.  See *<Leader>* for information
+about what that is.  The default value is "\" so if you haven't overridden
+this setting (I have - I use ',') you would use "\h<COMMAND>" for every
+command.
+
+                                                               *'git-gd'*
+<Leader>gd
+  Used: In the context of the current file.
+  Shows git diffs for the current file.
+
+                                                               *'git-gl'*
+<Leader>gl
+  Used: In the context of the current file.
+  Shows git log entries for all changes to the current file.
+
+                                                               *'git-gc'*
+<Leader>gc
+  Used: No context required.
+  Do a git commit
+
+                                                               *'git-ga'*
+<Leader>ga
+  Used: No context required.
+  Do a git commit with ammend
+                                                               *'git-gA'*
+
+<Leader>gA
+  Used: No context required.
+  Do a git commit with ammend and re-use the prior message
+
+
+                                                               *'git-gb'*
+<Leader>gb
+  Used: In the context of the current file.
+  Do a git blame
+
+
+===============================================================================
+CREDITS                                                     *git-credits*
+
+Really this is nothing more than my favorite keystrokes.  All credit goes
+to tpope.
+
+Git repository:       https://github.com/mchughj/vim-git
+
+===============================================================================
+
+vim:ft=help:et:ts=2:sw=2:sts=2:norl
