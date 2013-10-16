@@ -1,4 +1,3 @@
-
 "
 " Plugin for integration with git
 "
@@ -19,11 +18,15 @@ nmap <Leader>gd :Gdiff<cr>
 nmap <Leader>gl :Glog<CR>:copen<CR>
 nmap <Leader>gc :Gcommit<CR>
 nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gn :Gedit<CR>
+nmap <Leader>ga :Gcommit --amend<CR>
+nmap <Leader>gA :Gcommit --amend --reuse-message=HEAD<CR>
 
-nmap [c :cprevious
-nmap ]c :cnext
-nmap [C :cfirst
-nmap ]C :clast
+nmap [c :cprevious<CR>
+nmap ]c :cnext<CR>
+nmap [C :cfirst<CR>
+nmap ]C :clast<CR>
+
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

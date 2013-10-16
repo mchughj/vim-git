@@ -82,18 +82,23 @@ command.
                                                                *'git-ga'*
 <Leader>ga
   Used: No context required.
-  Do a git commit with ammend
+  Do a git commit with amend
                                                                *'git-gA'*
 
 <Leader>gA
   Used: No context required.
-  Do a git commit with ammend and re-use the prior message
+  Do a git commit with amend and re-use the prior message
 
 
                                                                *'git-gb'*
 <Leader>gb
   Used: In the context of the current file.
   Do a git blame
+
+                                                               *'git-gn'*
+<Leader>gn
+  Used: In the context of the current file.
+  Go to the normal view of the file
 
 
 ===============================================================================
