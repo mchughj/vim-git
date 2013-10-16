@@ -3,27 +3,43 @@ vim-git
 
 This is my customization of fugitive, a git integration system for VIM.
 
-This is really quite simplistic.  It simply creates the common keyboard 
-mappings that I use and expect. 
+(Note that in windows you have to change ~/.vim to be ~\vimfiles.)
 
-Although it may seem like a pain to use Vundle to install you will be happier
-if you do.  See
-  https://github.com/gmarik/vundle
+This requires:
 
-Installing vundle is trivial on a reasonable system with access to git and curl.
-The documentation for vundle is quite good and most people will be up and running 
-with it in 5 minutes or less.  
+1/  Pathogen:  https://github.com/tpope/vim-pathogen
 
-The advantage of vundle is that it becomes trivial to manage vim plugins like
-this one.  That includes getting updates and fixes.
+mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+curl -Sso ~/.vim/autoload/pathogen.vim \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
-Make sure that after you initialize Vundle in your .vimrc that you include
-this line:
+Modify your ~/.vimrc to contain:
 
-  Vundle 'mchughj/vim-git'
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+call pathogen#infect()
+
+2/  Fugitive: https://github.com/tpope/vim-fugitive
+
+cd ~/.vim/bundle
+git clone git://github.com/tpope/vim-fugitive.git
+
+
+3/  Vundle - https://github.com/gmarik/vundle
+
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+Add the following to your ~/.vimrc
+
+call vundle#rc()
+Bundle 'mchughj/vim-git'
 
 The final step is to call :BundleInstall!  This will fetch and update the
-bundles under control of Vundle.  Restart vim and type 
+bundles under control of Vundle.
+
+--
+
+Restart vim and type 
 
 :help git 
 
