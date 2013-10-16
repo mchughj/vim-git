@@ -1,5 +1,5 @@
-*git.txt*       Integration with Mercurial  v0.1
-*git* *'mercurial'*
+*git.txt*       Integration with Git  v0.1
+*Git* *git*
 ===============================================================================
 #                  GIT                                                        #
 #                                                                             #
@@ -58,6 +58,11 @@ Every mapping is tied to the <Leader> concept.  See *<Leader>* for information
 about what that is.  The default value is "\" so if you haven't overridden
 this setting (I have - I use ',') you would use "\h<COMMAND>" for every
 command.
+
+                                                               *'git-gh'*
+<Leader>gh
+  Used: No context required.
+  Shows help for fugitive
 
                                                                *'git-gd'*
 <Leader>gd

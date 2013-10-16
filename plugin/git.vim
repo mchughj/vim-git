@@ -12,6 +12,7 @@
 " ----------------------------------------------------------------
 nmap <Leader>ge :edit ~/.vim/bundle/vim-git/plugin/git.vim<CR>
 nmap <Leader>gE :new ~/.vim/bundle/vim-git/plugin/git.vim<CR>
+nmap <Leader>gh :help git<CR>
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<cr>
