@@ -14,7 +14,7 @@ CONTENTS                                                         *git-contents*
 INTRO                                                         *git-intro*
 
 Simple integration with git.  This bundle is really nothing more than a bunch
-of my standard keyboard mappings.
+of my standard keyboard mappings on top of fugitive.  See |Fugitive|.
 
 (Note that in windows you have to change ~/.vim to be ~\vimfiles.)
 
