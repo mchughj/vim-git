@@ -62,7 +62,7 @@ command.
                                                                *'git-gh'*
 <Leader>gh
   Used: No context required.
-  Shows help for fugitive
+  Shows this help file
 
                                                                *'git-gd'*
 <Leader>gd
@@ -74,22 +74,6 @@ command.
   Used: In the context of the current file.
   Shows git log entries for all changes to the current file.
 
-                                                               *'git-gc'*
-<Leader>gc
-  Used: No context required.
-  Do a git commit
-
-                                                               *'git-ga'*
-<Leader>ga
-  Used: No context required.
-  Do a git commit with amend
-                                                               *'git-gA'*
-
-<Leader>gA
-  Used: No context required.
-  Do a git commit with amend and re-use the prior message
-
-
                                                                *'git-gb'*
 <Leader>gb
   Used: In the context of the current file.
@@ -99,6 +83,35 @@ command.
 <Leader>gn
   Used: In the context of the current file.
   Go to the normal view of the file
+
+
+-- No file context --
+
+                                                               *'git-gi'*
+<Leader>gi
+  Used: No context required.
+  Information about the current head.  This is most commonly used
+  when you are in the process of changes and want to see what
+  your head looks like.
+
+                                                               *'git-gs'*
+<Leader>gs
+  Used: No context required.
+  Git status
+                                                               *'git-gc'*
+<Leader>gc
+  Used: No context required.
+  Do a git commit
+
+                                                               *'git-ga'*
+<Leader>ga
+  Used: No context required.
+  Do a git commit with amend
+
+                                                               *'git-gA'*
+<Leader>gA
+  Used: No context required.
+  Do a git commit with amend and re-use the prior message
 
 
 ===============================================================================
